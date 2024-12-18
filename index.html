@@ -1,68 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Travel Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
-    <header>
-        <nav>
-            <a href="#"> Logo </a>
-            <ul>
-                <li> Kereta </li>
-                <li> Bus </li>
-                <li> Pesawat </li>
-                <li> Kapal Penumpang </li>
+<body class="font-sans antialiased bg-white text-gray-900">
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+
+            <!-- Logo -->
+            <a href="#" class="text-2x1 font-bold text-blue-500">
+                TiketPesawat<span class="text-yellow-400">.com </span>
+            </a>
+
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#" class="hover:text-blue-500">Pesawat</a></li>
+                <li><a href="#" class="hover:text-blue-500">Hotel</a></li>
+                <li><a href="#" class="hover:text-blue-500">Bus & Travel</a></li>
+                <li><a href="#" class="hover:text-blue-500">Kereta</a></li>
             </ul>
-            
-            <div class="">
-                <a href="#">
+
+
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-sm text-gray-700">
                     Masuk
                 </a>
-                <button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-800 ">
                     Daftar
                 </button>
+
+                
             </div>
         </nav>
     </header>
 
-    <!-- hero section -->
-     <section>
-        <div>
-            <h1>Slogan</h1>
+    <!-- Hero Section -->
+
+    <section class="relative bg-cover bg-center h-[500px]"
+        style="background-image: url('https://i.pinimg.com/736x/8d/ca/9b/8dca9b525ef871682acb5497fc04983d.jpg');">
+
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative container mx-auto px-6 flex items-center justify-center h-full">
+            <div class="text-center text-white">
+                <h1 class="text-4xl font-bold mb-6">
+                    Penerbangan ke Jakarta
+                </h1>
+
+                <!-- form -->
+
+                <form action="#">
+                    <div class="bg-white opacity-97 rounded-lg hover:opacity-100 transition 6 sec">
+                        <div class="p-6 rounded-lg shadow-lg text-gray-900 mx-auto">
+                            <div class="flex mb-4 space-x-6">
+                                <button type="button" class="w-1/2 py-2 bg-blue-500 text-white rounded-md">
+                                    Sekali Jalan
+                                </button>
+                                <button type="button" class="w-1/2 py-2 bg-gray-200 rounded-md hover:bg-gray-300">
+                                    Pulang Pergi
+                                </button>
+                            </div>
+                            <div class="mb-4">
+                                <input type="text" placeholder="Pilih lokasi keberangkatan"
+                                    class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-blue-300" />
+                            </div>
+                            <div class="mb-4">
+                                <input type="date"
+                                    class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-blue-300" />
+                            </div>
+                            <button type="submit"
+                                class="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">
+                                Cari bus dan travel
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <form action="#">
-            <button type="button"> Sekali jalan </button>
-            <button type="button"> Pulang Pergi </button>
-            <input type="text" placeholder="Pilih lokasi keberangkatan" />
-            <input type="date" />
-            <button type="submit">
-                cari
-            </button>
+    </section>
 
-        </form>
-     </section>
-
-     <section>
-        <div class="">
-            <h3>Slogan</h3>
-            <p>Bisa Langsung Berangkat</p>
+    <!-- Informasi Tambahan -->
+    <section class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="flex items-start space-x-4">
+                <span class="text-blue-500 text-3xl">✅</span>
+                <div>
+                    <h3 class="font-bold">Pasti Dapat Kursi</h3>
+                    <p class="text-sm text-gray-600">
+                        Bisa langsung berangkat dengan nyaman, bebas khawatir.
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-start space-x-4">
+                <span class="text-yellow-500 text-3xl">🎟</span>
+                <div>
+                    <h3 class="font-bold">Diskon Setiap Hari</h3>
+                    <p class="text-sm text-gray-600">
+                        Nikmati harga terbaik untuk perjalanan Anda.
+                    </p>
+                </div>
+            </div>
+            <div class="flex items-start space-x-4">
+                <span class="text-green-500 text-3xl">💼</span>
+                <div>
+                    <h3 class="font-bold">Cara Pesan yang Mudah</h3>
+                    <p class="text-sm text-gray-600">
+                        Pesan tiket bus dan travel dengan cepat hanya di tiket.com.
+                    </p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="">
-            <h3>Slogan</h3>
-            <p>Pemesanan Mudah</p>
-        </div>
-
-        <div class="">
-            <h3>Slogan</h3>
-            <p>Destinasi wisata populer</p>
-        </div>
-
-
-     </section>
     
+        <!-- Daftar Penawaran -->
+        <section class="container mx-auto px-4 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <!-- Penawaran 1 -->
+              <div class="bg-white p-4 shadow-md rounded-lg">
+                <p class="font-bold">Wed, 5 Mar</p>
+                <p class="text-sm text-gray-500">YIA - CGK with TransNusa</p>
+                <p class="text-blue-500 font-semibold mt-2">from Rp 595.797</p>
+              </div>
+              <!-- Penawaran 2 -->
+              <div class="bg-white p-4 shadow-md rounded-lg">
+                <p class="font-bold">Thu, 6 Feb</p>
+                <p class="text-sm text-gray-500">YIA - HLP with Citilink</p>
+                <p class="text-blue-500 font-semibold mt-2">from Rp 619.501</p>
+              </div>
+              <!-- Penawaran 3 -->
+              <div class="bg-white p-4 shadow-md rounded-lg">
+                <p class="font-bold">Sun, 27 Apr</p>
+                <p class="text-sm text-gray-500">YIA - HLP with BatikAir Indonesia</p>
+                <p class="text-blue-500 font-semibold mt-2">from Rp 635.416</p>
+              </div>
+              <!-- Penawaran 4 -->
+              <div class="bg-white p-4 shadow-md rounded-lg">
+                <p class="font-bold">Tue, 15 Jul</p>
+                <p class="text-sm text-gray-500">YIA - HLP with BatikAir Indonesia</p>
+                <p class="text-blue-500 font-semibold mt-2">from Rp 645.066</p>
+              </div>
+              <!-- Penawaran 5 -->
+              <div class="bg-white p-4 shadow-md rounded-lg">
+                <p class="font-bold">Sat, 10 May</p>
+                <p class="text-sm text-gray-500">YIA - HLP with BatikAir Indonesia</p>
+                <p class="text-blue-500 font-semibold mt-2">from Rp 645.066</p>
+              </div>
+              <!-- Penawaran 6 -->
+              <div class="bg-white p-4 shadow-md rounded-lg">
+                <p class="font-bold">Wed, 25 Dec</p>
+                <p class="text-sm text-gray-500">YIA - CGK with BatikAir Indonesia</p>
+                <p class="text-blue-500 font-semibold mt-2">from Rp 656.241</p>
+              </div>
+              <!-- Penawaran 7 -->
+              <div class="bg-white p-4 shadow-md rounded-lg">
+                <p class="font-bold">Fri, 13 Jun</p>
+                <p class="text-sm text-gray-500">YIA - CGK with TransNusa</p>
+                <p class="text-blue-500 font-semibold mt-2">from Rp 687.732</p>
+              </div>
+              <!-- Penawaran 8 -->
+              <div class="bg-white p-4 shadow-md rounded-lg">
+                <p class="font-bold">Wed, 15 Jan</p>
+                <p class="text-sm text-gray-500">YIA - CGK with TransNusa</p>
+                <p class="text-blue-500 font-semibold mt-2">from Rp 696.367</p>
+              </div>
+            </div>
+          </section>
+
+
 </body>
+
 </html>
